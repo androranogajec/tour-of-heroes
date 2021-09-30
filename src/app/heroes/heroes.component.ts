@@ -1,7 +1,8 @@
 import { HeroService } from './../hero.service';
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
-import { MessageService } from '../message.service';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-heroes',
@@ -11,6 +12,8 @@ import { MessageService } from '../message.service';
 export class HeroesComponent implements OnInit {
   constructor(
     private heroService: HeroService,
+    private route: ActivatedRoute,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
